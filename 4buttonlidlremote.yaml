@@ -36,7 +36,7 @@ blueprint:
       default: []
       selector:
         action: {}
-   button_three_long_press:
+    button_three_long_press:
       name: B3 Long Press
       description: Action to run on button 3 (Bright) longpress
       default: []
@@ -60,7 +60,7 @@ action:
     command: '{{ trigger.event.data.command }}'
     args: '{{ trigger.event.data.args }}'
     stepmode: '{{trigger.event.data.params.step_mode}}'
-	movemode: '{{trigger.event.data.params.move_mode}}'
+    movemode: '{{trigger.event.data.params.move_mode}}'
 - choose:
   - conditions: '{{ command == ''off'' }}'
     sequence: !input 'button_one_short_press'
